@@ -139,6 +139,14 @@ namespace ThePortal.Models
             get;
             set;
         }
+
+        [Required]
+        [Display(Name = "Your Email id")]
+        public string Email
+        {
+            get;
+            set;
+        }
     }
 
     public class ExternalLogin
