@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "the Portal";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+            </p>
+        </div>
+    </section>
+}
+<h3>We suggest the following:</h3>
+<ol class="round">
+    <li class="one">
+        
+    </li>
+
+    <li class="two">
+    </li>
+
+    <li class="three">
+
+    </li>
+</ol>
+<aside>
+    <h3>Your Actions</h3>
+    <p>
+        You can do below:
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Upload Docs", "UploadDoc", "UploadDoc")</li>
+        <li>@Html.ActionLink("View Profile", "GetProfile", "Profile")</li>
+    </ul>
+</aside>
