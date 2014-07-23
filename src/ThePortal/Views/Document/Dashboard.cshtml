@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+
+<div>
+    <h2>@ViewBag.Message</h2>
+   <li>@Html.ActionLink("Upload Documents", "UploadDashboard", "Document")</li>
+    <li>@Html.ActionLink("View Your Documents", "Explore", "Document")</li>
+
+</div>

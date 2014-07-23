@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+
+@using (Html.BeginForm("Upload", "Document", FormMethod.Post, new
+{
+    enctype = "multipart/form-data"
+}))
+{
+    <div>
+        Your Documents:
+    </div>
+    <div>
+        Create a folder:
+        <input type="text" name="folderName" />
+    </div>
+    <div>
+        <b>@ViewBag.Message</b>
+        <input type="file" name="files[0]" id="files_0" />
+        <input type="file" name="files[1]" id="files_1" />
+        <input type="submit" value="Upload" name="Command" /><br />
+    </div>
+    <div>
+        @ViewBag.Message
+    </div>
+}
