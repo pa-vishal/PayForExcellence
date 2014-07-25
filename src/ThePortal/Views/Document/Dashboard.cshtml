@@ -1,0 +1,14 @@
+﻿@model System.Collections.Generic.IEnumerable<string>
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<h2>Dashboard</h2>
+
+
+<ul>
+    @foreach (string folder in Model)
+    {
+        <li><a href="@Url.Action("Files", "Document", new { subFolder = folder })">@folder</a> </li>
+    }
+</ul>
