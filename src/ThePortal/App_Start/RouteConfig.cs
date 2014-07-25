@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace ThePortal
@@ -12,6 +8,12 @@ namespace ThePortal
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            // elFinder's connector route
+            routes.MapRoute(null, "{connector}", new
+            {
+                controller = MVC.File.Name,
+                action = MVC.File.ActionNames.Index
+            });
 
             routes.MapRoute(
                 name: "Default",

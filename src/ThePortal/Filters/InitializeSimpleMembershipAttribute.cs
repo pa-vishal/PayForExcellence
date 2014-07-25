@@ -7,7 +7,6 @@ using MySql.Web.Security;
 using SimpleMembershipTest.Dac;
 using WebMatrix.WebData;
 using System.Linq;
-using ThePortal.Models;
 
 namespace ThePortal.Filters
 {
