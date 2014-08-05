@@ -14,11 +14,12 @@ namespace ThePortal.Controllers
         {
             var path = GetFileUploadRootPath();
 
-            DirectoryInfo di = new DirectoryInfo(path);
+            var di = new DirectoryInfo(path);
             // Enumerating all 1st level directories of a given root folder (MyFolder in this case) and retrieving the folders names.
             var folders = di.GetDirectories().ToList().Select(d => d.Name);
 
-            return View(folders);
+            return folders.Any() ? View(folders) : 
+                View("Files", new FileViewModel{Folder = string.Empty, SubFolder = string.Empty});
         }
 
         private string GetFileUploadRootPath()
